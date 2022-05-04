@@ -18,7 +18,7 @@
         </div>
 
         <div class="row">
-            <div class="col-4">
+            <div class="col-6">
                 <div class="Button">
                     <h2>Title and Button Component</h2>
                     <div x-data="{ title: 'Hello Alpine' }">
@@ -28,7 +28,7 @@
                 </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-6">
                 <div class="Counter">
                     <h2>Counter Component</h2>
                     <div x-data="{ count: 1 }">
@@ -38,27 +38,23 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-4">
+        </div>
+        <div class="row">
+            <div class="col-6">
                 <div class="Timer">
                     <h2>Timer Countdown</h2>
-                    <div x-data="{ countdown: 90 }" x-init="setInterval(function(){
-                countdown--;}, 1000);">
+                    <div x-data="{ countdown: 90, timeCounter: false }" x-init="setInterval(function(){
+                        if (countdown > 0 && timeCounter) {countdown--;}}, 1000);">
                         <h1 x-text="countdown"></h1>
+                        <button @click="$el.replaceWith($el.cloneNode(true))">Reset</button>
+                        <button @click="timeCounter=!timeCounter">Start/Stop</button>
                     </div>
                 </div>
             </div>
-        </div>
 
-
-
-
-        <div class="row">
-            <div class="col-4">
+            <div class="col-6">
                 <div class="ShowBtn">
-                    <h2>Show
-                        <Button></Button>
-                    </h2>
+                    <h2>Show</h2>
                     <div x-data="{ show: false }">
                         <button @click="show=!show">Show</button>
                         <div x-show.transition="show">Hello</div>
@@ -66,7 +62,10 @@
                 </div>
             </div>
 
-            <div class="col-4">
+        </div>
+
+        <div class="row">
+            <div class="col-6">
                 <div class="Model">
                     <h2>X-Model</h2>
                     <div x-data="{ title: 'AlpineJS is Awesome' }">
@@ -76,7 +75,7 @@
                 </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-6">
                 <div class="Html">
                     <h2>X-Html</h2>
                     <div x-data="{ code: '<p>Dynamic Paragraph</p>' }">
@@ -87,7 +86,7 @@
 
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-6">
                 <div class="Ref">
                     <h2>X-Ref</h2>
                     <div x-data="{ code: '<p>Dynamic Paragraph</p>' }">
@@ -97,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-6">
                 <div class="If">
                     <h2>If Directive</h2>
                     <div x-data="{ socks: 'blue' }">
@@ -107,12 +106,13 @@
                         <template x-if="socks=='green'">
                         <p>My socks are green</p>
                     </template>
-                        <button @click="socks = 'green'">Change Sox</button>
+                        <button @click="socks = 'green'">Change Socks</button>
                     </div>
                 </div>
             </div>
-
-            <div class="col-4">
+        </div>
+        <div class="row">
+            <div class="col-6">
                 <div class="For">
                     <h2>For Directive</h2>
                     <div x-data="{ groceries: ['Milk', 'Eggs', 'Cheese'] }">

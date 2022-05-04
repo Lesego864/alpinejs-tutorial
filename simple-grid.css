@@ -21,6 +21,78 @@ body {
     font-size: small;
 }
 
+.Button {
+    border: 1.5px solid #80ED99;
+    padding: 1em;
+    /* margin-right: 3em; */
+    margin-bottom: 2em;
+    border-radius: 1.5em;
+}
+
+.Counter {
+    border: 1.5px solid #80ED99;
+    padding: 1em;
+    height: 14.5em;
+    margin-bottom: 2em;
+    border-radius: 1.5em;
+}
+
+.Timer {
+    border: 1.5px solid #80ED99;
+    padding: 1em;
+    height: 14.5em;
+    margin-bottom: 2em;
+    border-radius: 1.5em;
+}
+
+.ShowBtn {
+    border: 1.5px solid #80ED99;
+    padding: 1em;
+    height: 14.5em;
+    margin-bottom: 2em;
+    border-radius: 1.5em;
+}
+
+.Model {
+    border: 1.5px solid #80ED99;
+    padding: 1em;
+    height: 14.5em;
+    margin-bottom: 2em;
+    border-radius: 1.5em;
+}
+
+.Html {
+    border: 1.5px solid #80ED99;
+    padding: 1em;
+    height: 14.5em;
+    margin-bottom: 2em;
+    border-radius: 1.5em;
+}
+
+.Ref {
+    border: 1.5px solid #80ED99;
+    padding: 1em;
+    height: 14.5em;
+    margin-bottom: 2em;
+    border-radius: 1.5em;
+}
+
+.If {
+    border: 1.5px solid #80ED99;
+    padding: 1em;
+    height: 14.5em;
+    margin-bottom: 2em;
+    border-radius: 1.5em;
+}
+
+.For {
+    border: 1.5px solid #80ED99;
+    padding: 1em;
+    height: 14.5em;
+    margin-bottom: 2em;
+    border-radius: 1.5em;
+}
+
 
 /* ROOT FONT STYLES */
 
@@ -216,7 +288,7 @@ button:hover {
     .container {
         width: 80%;
     }
-    .col-4 {
+    /* .col-6 {
         border: 1.5px solid #80ED99;
         padding: 1em;
         margin: 1em;
@@ -225,7 +297,7 @@ button:hover {
         width: 15em;
         text-align: center;
         column-gap: 200px;
-    }
+    } */
 }
 
 @media only screen and (min-width: 45em) {
@@ -240,21 +312,16 @@ button:hover {
         width: 21%;
     }
     .col-4 {
-        border: 1.5px solid #80ED99;
-        padding: 1em;
-        margin: 1em;
-        margin-right: 3em;
-        margin-bottom: 2em;
-        border-radius: 1.5em;
-        width: 15em;
-        text-align: center;
-        column-gap: 200px;
+        width: 29.33%;
     }
     .col-5 {
         width: 37.66%;
     }
     .col-6 {
         width: 46%;
+        /* border: 1.5px solid #80ED99; */
+        /* border-radius: 1.5em; */
+        /* text-align: center; */
     }
     .col-7 {
         width: 54.33%;
