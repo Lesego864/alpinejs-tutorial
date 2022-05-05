@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="Button">
-                    <h3>Creating components using x-data, x-text and x-on:click directives</h3>
+                    <h3>Creating components using x-data, x-text and x-on:click directives.</h3>
                     <p> A bit of theory: <br>x-data directive defines a chunk of HTML as an Alpine component and provides the reactive data for that component to reference. x-text sets the text content of an element to the result of a given expression. x-on:click
                         directive executes some javascript when a specific element is clicked. See the example below: </p>
                     <div x-data="{ title: 'Hello Alpine' }">
@@ -33,7 +33,7 @@
 
             <div class="col-6">
                 <div class="Counter">
-                    <h3>Building a counter component to demonstrate the basics of state and event listening</h3>
+                    <h3>Building a counter component to demonstrate the basics of state and event listening.</h3>
                     <p>We can create a counter component by declaring a count variable and set the initial value to 0 for our counter. We then add buttons to increment and decrease our counter, You may also want to add a button that will decrease the counter,
                         as shown in the example:</p>
                     <div x-data="{ count: 1 }">
@@ -47,7 +47,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="Timer">
-                    <h3>Timer Countdown</h3>
+                    <h3>Building a countdown timer that can be reinitialized, started and stopped using x-init and setInterval.</h3>
                     <div x-data="{ countdown: 90, timeCounter: false }" x-init="setInterval(function(){
                         if (countdown > 0 && timeCounter) {countdown--;}}, 1000);">
                         <h1 x-text="countdown"></h1>
@@ -59,7 +59,7 @@
 
             <div class="col-6">
                 <div class="ShowBtn">
-                    <h3>Show</h3>
+                    <h3>Showing or hiding an element optionally using the x-show directive.</h3>
                     <div x-data="{ show: false }">
                         <button @click="show=!show">Show</button>
                         <div x-show.transition="show">Hello</div>
@@ -72,7 +72,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="Model">
-                    <h3>X-Model</h3>
+                    <h3>Bind a variable to a form element through the x-model directive.</h3>
                     <div x-data="{ title: 'AlpineJS is Awesome' }">
                         <p x-text="title"></p>
                         <input type="text" x-model="title">
@@ -82,7 +82,7 @@
 
             <div class="col-6">
                 <div class="Html">
-                    <h3>X-Html</h3>
+                    <h3> Add dynamic HTML inside any element using the x-html directive.</h3>
                     <div x-data="{ code: '<p>Dynamic Paragraph</p>' }">
                         <div x-html="code"></div>
                     </div>
@@ -93,7 +93,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="Ref">
-                    <h3>X-Ref</h3>
+                    <h3>Reference any element with a specified name via the x-ref directive.</h3>
                     <div x-data="{ code: '<p>Dynamic Paragraph</p>' }">
                         <div x-ref="sentence">I am a sentence</div>
                         <button @click="$refs.sentence.innerText = 'I just changed'">Change Sentence</button>
@@ -103,7 +103,7 @@
 
             <div class="col-6">
                 <div class="If">
-                    <h3>If Directive</h3>
+                    <h3>Show or hide elements based on a conditional statements by using the x-if directive.</h3>
                     <div x-data="{ socks: 'blue' }">
                         <template x-if="socks=='blue'">
                         <p>My socks are blue</p>
@@ -119,7 +119,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="For">
-                    <h3>For Directive</h3>
+                    <h3>Loop through an array of items inside of components via the x-for directive.</h3>
                     <div x-data="{ groceries: ['Milk', 'Eggs', 'Cheese'] }">
                         <p>Groceries:</p>
                         <ul>
