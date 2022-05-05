@@ -48,6 +48,7 @@
             <div class="col-6">
                 <div class="Timer">
                     <h3>Building a countdown timer that can be reinitialized, started and stopped using x-init and setInterval.</h3>
+                    <p>Below is an example of a small timer countdown component where we add a simple setInterval and if statement inside the x-init directive to count down, start, stop and reset the timer.</p>
                     <div x-data="{ countdown: 90, timeCounter: false }" x-init="setInterval(function(){
                         if (countdown > 0 && timeCounter) {countdown--;}}, 1000);">
                         <h1 x-text="countdown"></h1>
@@ -60,6 +61,7 @@
             <div class="col-6">
                 <div class="ShowBtn">
                     <h3>Showing or hiding an element optionally using the x-show directive.</h3>
+                    <p>x-show is one of the most useful and powerful directives in Alpine. It provides an expressive way to show and hide DOM elements.</p>
                     <div x-data="{ show: false }">
                         <button @click="show=!show">Show</button>
                         <div x-show.transition="show">Hello</div>
@@ -73,6 +75,7 @@
             <div class="col-6">
                 <div class="Model">
                     <h3>Bind a variable to a form element through the x-model directive.</h3>
+                    <p>As seen on the below example, the textbox is bound to the variable title. Whenever you update the value of the variable or the text box's value, they will stay in sync.</p>
                     <div x-data="{ title: 'AlpineJS is Awesome' }">
                         <p x-text="title"></p>
                         <input type="text" x-model="title">
@@ -83,6 +86,7 @@
             <div class="col-6">
                 <div class="Html">
                     <h3> Add dynamic HTML inside any element using the x-html directive.</h3>
+                    <p>Using the x-html directive will set the innerHTML of any element. We can also use the x-text directive to set the innerText of any element like the example below:</p>
                     <div x-data="{ code: '<p>Dynamic Paragraph</p>' }">
                         <div x-html="code"></div>
                     </div>
@@ -94,6 +98,7 @@
             <div class="col-6">
                 <div class="Ref">
                     <h3>Reference any element with a specified name via the x-ref directive.</h3>
+                    <p>x-ref in combination with $refs is a useful utility for easily accessing DOM elements directly. It's most useful as a replacement for APIs like getElementById and querySelector.</p>
                     <div x-data="{ code: '<p>Dynamic Paragraph</p>' }">
                         <div x-ref="sentence">I am a sentence</div>
                         <button @click="$refs.sentence.innerText = 'I just changed'">Change Sentence</button>
@@ -104,6 +109,7 @@
             <div class="col-6">
                 <div class="If">
                     <h3>Show or hide elements based on a conditional statements by using the x-if directive.</h3>
+                    <p>Using this directive will show or hide the specified element from the DOM, see the example below:</p>
                     <div x-data="{ socks: 'blue' }">
                         <template x-if="socks=='blue'">
                         <p>My socks are blue</p>
@@ -120,6 +126,7 @@
             <div class="col-6">
                 <div class="For">
                     <h3>Loop through an array of items inside of components via the x-for directive.</h3>
+                    <p>As seen from the example below, one can loop through the array of groceries and displaying each item in a list.</p>
                     <div x-data="{ groceries: ['Milk', 'Eggs', 'Cheese'] }">
                         <p>Groceries:</p>
                         <ul>
